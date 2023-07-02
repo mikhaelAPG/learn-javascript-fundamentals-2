@@ -102,3 +102,32 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
+
+// coding challenge 1
+const calcAverage = (varA, varB, varC) => (varA + varB + varC) / 3;
+// test data 1
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
+// let scoreDolphins = calcAverage(85, 54, 41);
+// let scoreKoalas = calcAverage(23, 34, 27);
+console.log(scoreDolphins, scoreKoalas);
+
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+    if (avgDolphins >= 2 * avgKoalas) {
+        console.log(`Dolphins win ${avgDolphins} vs ${avgKoalas}`);
+    } else if (avgKoalas >= 2 * avgDolphins) {
+        console.log(`Koalas win ${avgKoalas} vs ${avgDolphins}`);
+    } else {
+        console.log(`no team win`);
+    }
+}
+checkWinner(scoreDolphins, scoreKoalas);
+
+// test data 2
+// scoreDolphins = calcAverage(44, 23, 71);
+// scoreKoalas = calcAverage(65, 54, 49);
+scoreDolphins = calcAverage(85, 54, 41);
+scoreKoalas = calcAverage(23, 34, 27);
+console.log(scoreDolphins, scoreKoalas);
+checkWinner(scoreDolphins, scoreKoalas);
